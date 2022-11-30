@@ -4,7 +4,7 @@
 
 import sys
 
-def cidr_to_subnet(ID):
+def cidr_to_mask(ID):
     subnet = []
     for i in range(32):
         if (i < ID):
@@ -64,7 +64,7 @@ if __name__=="__main__":
         (addr, cidr) = sys.argv[1].split('/')
         print(f"IP address: {addr}\n\
 CIDR: {cidr}\n\
-Subnet mask: {cidr_to_subnet(int(cidr))}\n\
+Subnet mask: {cidr_to_mask(int(cidr))}\n\
 Host count: {host_count(cidr)}\n\
 Network ID: {addr}\n\
 Gateway: {gateway(addr, cidr)}\n\
