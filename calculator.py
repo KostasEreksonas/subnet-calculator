@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Usage: IP/CIDR (e.g 192.168.0.0/24)
+# Usage: <ip>/<cidr> (e.g 192.168.0.0/24)
 
 import sys
 
