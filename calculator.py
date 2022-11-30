@@ -52,10 +52,10 @@ def gateway(IP, ID):
         pos2 = int((tmp2-pos1*256*256*256)/(256*256)-1)
         pos3 = int((tmp3-pos1*256*256*256-pos2*256*256)/256-1)
         pos4 = int((hosts-pos1*256*256*256-pos2*256*256-pos3*256)-1)
-        ip[0] = pos4
-        ip[1] = pos3
-        ip[2] = pos2
-        ip[3] = pos1
+        ip[0] = pos1
+        ip[1] = pos2
+        ip[2] = pos3
+        ip[3] = pos4
     address = ".".join(str(x) for x in ip)
     return address
 
