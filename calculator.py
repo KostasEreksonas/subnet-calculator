@@ -27,6 +27,7 @@ def gateway(IP, ID):
     (num1, num2, num3, num4) = IP.split('.')
     ip = [int(num1), int(num2), int(num3), int(num4)]
     hosts = host_count(ID)+2
+    # IP address construction
     if (hosts <= 256):
         ip[3] = hosts-1
     elif (hosts > 256 and hosts <= 256*256):
@@ -59,6 +60,7 @@ def gateway(IP, ID):
     address = ".".join(str(x) for x in ip)
     return address
 
+# Main program
 if __name__=="__main__":
     if len(sys.argv) == 2:
         (addr, cidr) = sys.argv[1].split('/')
