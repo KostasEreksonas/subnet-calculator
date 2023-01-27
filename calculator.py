@@ -4,6 +4,7 @@
 
 import sys
 
+# Converd CIDR to subnet mask
 def cidr_to_mask(ID):
     subnet = []
     for i in range(32):
@@ -19,10 +20,12 @@ def cidr_to_mask(ID):
     mask = ".".join(str(x) for x in results)
     return mask
 
+# Count hosts available in a given IP range
 def host_count(ID):
     count = 2**(32-int(ID)) - 2
     return count
 
+# Compute gateway IP address
 def gateway(IP, ID):
     (num1, num2, num3, num4) = IP.split('.')
     ip = [int(num1), int(num2), int(num3), int(num4)]
